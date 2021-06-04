@@ -101,7 +101,7 @@ open class AWStationData: SWKDeviceData, Codable {
     internal let airQualityIn:Float?
     internal let airQualityIn24:Float?
     internal let timeZone: String?
-    internal let dateUTC: Int?
+    internal let dateUTC: Int64?
     internal let rainLastDate: String?
     internal let dewPointOut: Float?
     internal let dewPointIn: Float?
@@ -421,7 +421,7 @@ open class AWStationData: SWKDeviceData, Codable {
             airQualityIn24 = try container.decodeIfPresent(Float.self, forKey: .airQualityIn24)
             
             timeZone = try container.decodeIfPresent(String.self, forKey: .timeZone)
-            dateUTC = 10
+            dateUTC = try container.decodeIfPresent(Int64.self, forKey: .dateUTC)
             rainLastDate = try container.decodeIfPresent(String.self, forKey: .rainLastDate)
             dewPointOut = try container.decodeIfPresent(Float.self, forKey: .dewPointOut)
             dewPointIn = try container.decodeIfPresent(Float.self, forKey: .dewPointIn)
