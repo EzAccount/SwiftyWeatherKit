@@ -101,7 +101,7 @@ open class AWStationData: SWKDeviceData, Codable {
     internal let airQualityIn:Float?
     internal let airQualityIn24:Float?
     internal let timeZone: String?
-    internal let dateUTC: Int?
+    internal let dateUTC: String?
     internal let rainLastDate: String?
     internal let dewPointOut: Float?
     internal let dewPointIn: Float?
