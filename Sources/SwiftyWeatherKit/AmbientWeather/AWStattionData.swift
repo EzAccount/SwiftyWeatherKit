@@ -320,6 +320,7 @@ open class AWStationData: SWKDeviceData, Codable {
     required public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         do {
+            print("Decoding started")
             windDirection = try container.decodeIfPresent(Int.self, forKey: .windDirection)
             windSpeedMPH = try container.decodeIfPresent(Float.self, forKey: .windSpeedMPH)
             windGustMPH = try container.decodeIfPresent(Float.self, forKey: .windGustMPH)
