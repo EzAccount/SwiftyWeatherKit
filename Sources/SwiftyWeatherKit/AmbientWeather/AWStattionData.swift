@@ -420,7 +420,7 @@ open class AWStationData: SWKDeviceData, Codable {
             airQualityIn24 = try container.decodeIfPresent(Float.self, forKey: .airQualityIn24)
             
             timeZone = try container.decodeIfPresent(String.self, forKey: .timeZone)
-            dateUTC = try container.decodeIfPresent(Int.self, forKey: .dateUTC)
+            dateUTC = try container.decodeIfPresent(String.self, forKey: .dateUTC)
             rainLastDate = try container.decodeIfPresent(String.self, forKey: .rainLastDate)
             dewPointOut = try container.decodeIfPresent(Float.self, forKey: .dewPointOut)
             dewPointIn = try container.decodeIfPresent(Float.self, forKey: .dewPointIn)
